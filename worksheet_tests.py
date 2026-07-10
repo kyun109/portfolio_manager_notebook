@@ -56,7 +56,7 @@ class Task:
 class PriceChangeTask(Task):
     name = "Price Change Task"
     tests = [
-        TestCase((10, 15), 5, "cmon, its basic math")
+        TestCase((10, 15), 5, "Did you do the wrong order?")
     ]
 
 class ToCentsTask(Task):
