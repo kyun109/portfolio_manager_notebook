@@ -96,7 +96,10 @@ def amazon_capital_gain(month_purchased_index: int):
     Inputs:
         month_purchased_index: the INDEX of the month the stock was purchased in
     """
-    return 0
+# if you want to find last number on list, can just use [-1] : amzn_price[-1]
+    gain = amzn_price[len(amzn_price)-1] - amzn_price[month_purchased_index]
+    gain = round(gain,2)
+    return gain
 
 print("\tAmazon Capital Gain when bought in month 2", amazon_capital_gain(2))
 
