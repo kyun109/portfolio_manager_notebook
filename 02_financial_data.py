@@ -15,7 +15,8 @@ def calculate_capital_gain(current_price, cost_basis, quantity):
     Returns:
         profit/loss: positive or negative dollar value
     """
-    return 0
+    gain = (current_price - cost_basis)*quantity
+    return gain
 
 gain = calculate_capital_gain(
     current_price=500,
@@ -50,11 +51,34 @@ DATES   =   ["2025-07",	"2025-08",	"2025-09",	"2025-10",	"2025-11",	"2025-12",	"
 # buuut, we have a problem, for some reason, the numbers they give us have way too many decimal digits, more than we need
 #       (* it was actually so much worse, i deleted the rest of the digits but it actually looked like this [217.2100067138672, 223.52000427246094 ...])
 # so, before we work with this data, lets round these to the nearest 2 decimals.
+# write a function that adds the indexes in the list
+def addlist(id_1, id_2):
+    addition = amzn_price[id_1] + amzn_price[id_2]
+    rounded_value = round(addition,2)
+    return rounded_value
+
+print(addlist(2,1))
+
+
 
 print("\n\t--- 2a: Rounding ---")
 # for each of the values in the amzn_price list, REPLACE the value with value rounded to 2 decimal places (for cents).
 
 # WRITE CODE HERE
+
+# id = 0
+# while id < len(amzn_price):
+#     rounded = round(amzn_price[id], 2)
+#     amzn_price[id] = rounded
+#     id = id + 1
+
+for id in range(0, len(amzn_price), 1):
+    rounded = round(amzn_price[id], 2)
+    amzn_price[id] = rounded    
+
+
+
+
 
 
 
