@@ -62,7 +62,7 @@ class PriceChangeTask(Task):
 class ToCentsTask(Task):
     name = "Dollars to Cents Task"
     tests = [
-        TestCase((5), 500, "Did you do the arithmetic wrong?"),
+        TestCase((5,), 500, "Did you do the arithmetic wrong?"),
     ]
 
 class PercentGainTask(Task):
